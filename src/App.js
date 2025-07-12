@@ -729,7 +729,7 @@ function App() {
     batch.forEach((file) => formData.append("files", file));
 
     try {
-      const response = await fetch("https://a400c30d5532.ngrok-free.app/uploadfile", {
+      const response = await fetch("https://document-converter-oga9.onrender.com/uploadfile", {
         method: "POST",
         body: formData,
         headers: {
@@ -772,7 +772,7 @@ function App() {
     formData.append("files", file);
     try {
       setFileStatuses((prev) => ({ ...prev, [file.name]: "uploading" }));
-      const response = await fetch("https://a400c30d5532.ngrok-free.app/uploadfile", {
+      const response = await fetch("https://document-converter-oga9.onrender.com/uploadfile", {
         method: "POST",
         body: formData,
         headers: {
@@ -818,7 +818,7 @@ function App() {
 
   const downloadExcel = async () => {
     try {
-      const response = await fetch("https://a400c30d5532.ngrok-free.app/download", {
+      const response = await fetch("https://document-converter-oga9.onrender.com/download", {
         method: "GET",
         headers: {
           "ngrok-skip-browser-warning": "true", // in case ngrok injects banner
